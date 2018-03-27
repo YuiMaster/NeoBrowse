@@ -4,6 +4,14 @@
     <meta http-equiv="content-type" content="text/html;charset=gb2312">
     <script type="text/javascript">
 
+        function javaCallJs(){
+            document.getElementById("content").innerHTML = "Java调用了JS"
+        }
+
+        function javaCallChangeTitle(arg){
+            document.getElementById("content").innerHTML = (arg);
+        }
+
     </script>
 
 

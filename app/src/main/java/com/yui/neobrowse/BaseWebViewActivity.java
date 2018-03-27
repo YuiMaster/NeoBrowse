@@ -210,13 +210,26 @@ public class BaseWebViewActivity extends AbstractBaseActivity {
 
         /**
          * 加载页面
+         * file:///android_asset/local_web.html
          * */
         webView.loadUrl("file:///android_asset/local_web.html");
     }
 
 
+    /**
+     * 测试代码，java调用js
+     */
+    private boolean re = true;
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (re) {
+            re = false;
+            webView.loadUrl("javascript:javaCallChangeTitle('你说呢')");
+            return true;
+        }
+
         /**
          * webView.canGoBack()在webView含有一个可后退的浏览记录时返回true
          */
