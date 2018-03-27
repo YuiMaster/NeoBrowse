@@ -132,9 +132,9 @@ public class BaseWebViewActivity extends AbstractBaseActivity {
              */
             @Override
             public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-                handler.proceed();  // 接受信任所有网站的证书
-                // handler.cancel();   // 默认操作 不处理
-                // handler.handleMessage(null);  // 可做其他处理
+                handler.proceed();  /** 接受信任所有网站的证书 */
+                // handler.cancel();  /** 默认操作 不处理 */
+                // handler.handleMessage(null);   /** 可做其他处理 */
             }
         });
 
