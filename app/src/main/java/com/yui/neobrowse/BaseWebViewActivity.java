@@ -205,13 +205,13 @@ public class BaseWebViewActivity extends AbstractBaseActivity {
          * 支持js
          * */
         webSettings.setJavaScriptEnabled(true);
-        webView.addJavascriptInterface(new JSInterface(), "Android");
+        webView.addJavascriptInterface(new JSInterface(this), "Android");
 
 
         /**
          * 加载页面
          * */
-        webView.loadUrl("https://www.baidu.com/");
+        webView.loadUrl("file:///android_asset/local_web.html");
     }
 
 

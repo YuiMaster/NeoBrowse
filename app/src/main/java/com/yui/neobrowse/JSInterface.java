@@ -14,11 +14,14 @@ import android.widget.Toast;
  * @description *
  */
 public class JSInterface {
-    public JSInterface() {
+    private Context mContext;
+
+    public JSInterface(Context context) {
+        mContext = context;
     }
 
     @JavascriptInterface
-    public void showToast(Context context, String data) {
-        Toast.makeText(context, data, Toast.LENGTH_SHORT).show();
+    public void showToast(String data) {
+        Toast.makeText(mContext, data, Toast.LENGTH_SHORT).show();
     }
 }
